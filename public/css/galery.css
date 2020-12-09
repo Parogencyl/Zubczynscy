@@ -1,0 +1,109 @@
+#galleryBg {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -10;
+}
+
+#galleryBg:after {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0.9);
+    z-index: -9;
+}
+
+img {
+    box-shadow: 0 0 4px 1px white;
+    transition: 0.7s;
+    border-radius: 5px;
+    opacity: 0.7;
+}
+
+nav img {
+    opacity: 1;
+}
+
+img:hover {
+    opacity: 1;
+}
+
+#photos {
+    /* Prevent vertical gaps */
+
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+    gap: 17px;
+}
+
+#photos img {
+    /* Just in case there are inline attributes */
+    width: 100% !important;
+    height: auto !important;
+}
+
+#photos img:nth-last-of-type(0) {
+    margin-bottom: 20px;
+}
+
+.galleryImg {
+    background-image: url("http://i.stack.imgur.com/MnyxU.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dustbin {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: auto;
+    height: auto;
+    z-index: 2000;
+    font-size: 50px;
+    color: red;
+}
+
+.dustbin button {
+    border: none;
+    background-color: rgb(0, 0, 0, 0);
+    color: red;
+}
+
+@media (max-width: 1200px) {
+    #photos {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+}
+@media (max-width: 1000px) {
+    #photos {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+@media (max-width: 800px) {
+    #photos {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+@media (max-width: 576px) {
+    #photos {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}

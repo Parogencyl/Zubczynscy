@@ -1,0 +1,4 @@
+Wyœwietlanie galerii zdjêæ z fb:
+https://unitedwebsoft.in/blog/using-php-display-facebook-albums-photos-website/
+
+Trzeba stworzyæ jeszcze facebook apk na facebook developer
